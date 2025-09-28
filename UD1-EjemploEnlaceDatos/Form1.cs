@@ -14,6 +14,12 @@ namespace UD1_EjemploEnlaceDatos
     {
         public string[] misCiudades = new string[] { "Sevilla", "Córdoba", "Granada" };
         public List<Ciudad> ciudades;
+        public Ciudad lucena = new Ciudad()
+        {
+            NombreCiudad = "Lucena",
+            PoblacionCiudad = 60000,
+            PaisCiudad = "España"
+        };
 
         public Form1()
         {
@@ -22,16 +28,18 @@ namespace UD1_EjemploEnlaceDatos
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+
             cmbCiudades.DataSource = misCiudades;
             ciudades = new List<Ciudad>()
             {
-                new Ciudad
+                new Ciudad ()
                 {
                     NombreCiudad = "Sevilla",
                     PoblacionCiudad = 150000,
                     PaisCiudad = "España"
                 },
-                  new Ciudad
+                  new Ciudad ()
                 {
                     NombreCiudad = "Córdoba",
                     PoblacionCiudad = 300000,
@@ -39,7 +47,37 @@ namespace UD1_EjemploEnlaceDatos
                 },
             };
             
-            dgvCiudades.DataSource = ciudades;
+           dgvCiudades.DataSource = ciudades;
+          
+            // ciudadBindingSource.DataSource = ciudades;
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            if (!ciudades.Contains(lucena))
+            {
+                ciudades.Add(lucena);
+                dgvCiudades.DataSource = null;
+                dgvCiudades.DataSource = ciudades;
+            }
+               
+        }
+
+        private void btnErase_Click(object sender, EventArgs e)
+        {
+            foreach (Ciudad c in ciudades.ToList())
+            {
+                if (c.NombreCiudad == "Sevilla")
+                {
+                    ciudades.Remove(c);
+                    dgvCiudades.DataSource = null;
+                    dgvCiudades.DataSource = ciudades;
+                }
+            }
+
+
         }
     }
 }

@@ -34,12 +34,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvCiudades = new System.Windows.Forms.DataGridView();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnErase = new System.Windows.Forms.Button();
             this.nombreCiudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.poblacionCiudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paisCiudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ciudadBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.ciudadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCiudades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,8 +97,28 @@
             this.dgvCiudades.Name = "dgvCiudades";
             this.dgvCiudades.RowHeadersWidth = 51;
             this.dgvCiudades.RowTemplate.Height = 24;
-            this.dgvCiudades.Size = new System.Drawing.Size(402, 150);
+            this.dgvCiudades.Size = new System.Drawing.Size(647, 150);
             this.dgvCiudades.TabIndex = 4;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(154, 337);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(156, 47);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Añadir Lucena";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnErase
+            // 
+            this.btnErase.Location = new System.Drawing.Point(367, 337);
+            this.btnErase.Name = "btnErase";
+            this.btnErase.Size = new System.Drawing.Size(166, 47);
+            this.btnErase.TabIndex = 6;
+            this.btnErase.Text = "Quitar Sevilla";
+            this.btnErase.UseVisualStyleBackColor = true;
+            this.btnErase.Click += new System.EventHandler(this.btnErase_Click);
             // 
             // nombreCiudadDataGridViewTextBoxColumn
             // 
@@ -122,11 +148,21 @@
             // 
             this.ciudadBindingSource.DataSource = typeof(UD1_EjemploEnlaceDatos.Ciudad);
             // 
+            // ciudadBindingSource2
+            // 
+            this.ciudadBindingSource2.DataSource = typeof(UD1_EjemploEnlaceDatos.Ciudad);
+            // 
+            // ciudadBindingSource1
+            // 
+            this.ciudadBindingSource1.DataSource = typeof(UD1_EjemploEnlaceDatos.Ciudad);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(889, 554);
+            this.Controls.Add(this.btnErase);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvCiudades);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -137,6 +173,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCiudades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,6 +191,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn poblacionCiudadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paisCiudadDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource ciudadBindingSource;
+        private System.Windows.Forms.BindingSource ciudadBindingSource1;
+        private System.Windows.Forms.BindingSource ciudadBindingSource2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnErase;
     }
 }
 
