@@ -47,9 +47,8 @@ namespace UD1_EjemploEnlaceDatos
                 },
             };
             
-           dgvCiudades.DataSource = ciudades;
           
-            // ciudadBindingSource.DataSource = ciudades;
+            ciudadBindingSource.DataSource = ciudades;
 
         }
 
@@ -59,8 +58,8 @@ namespace UD1_EjemploEnlaceDatos
             if (!ciudades.Contains(lucena))
             {
                 ciudades.Add(lucena);
-                dgvCiudades.DataSource = null;
-                dgvCiudades.DataSource = ciudades;
+                ciudadBindingSource.DataSource = null;
+                ciudadBindingSource.DataSource = ciudades;
             }
                
         }
@@ -72,8 +71,8 @@ namespace UD1_EjemploEnlaceDatos
                 if (c.NombreCiudad == "Sevilla")
                 {
                     ciudades.Remove(c);
-                    dgvCiudades.DataSource = null;
-                    dgvCiudades.DataSource = ciudades;
+                    ciudadBindingSource.DataSource = null;
+                    ciudadBindingSource.DataSource = ciudades;
                 }
             }
 

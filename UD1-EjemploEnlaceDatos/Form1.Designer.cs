@@ -36,16 +36,12 @@
             this.dgvCiudades = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnErase = new System.Windows.Forms.Button();
+            this.ciudadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombreCiudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.poblacionCiudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paisCiudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ciudadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ciudadBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.ciudadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCiudades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -120,6 +116,10 @@
             this.btnErase.UseVisualStyleBackColor = true;
             this.btnErase.Click += new System.EventHandler(this.btnErase_Click);
             // 
+            // ciudadBindingSource
+            // 
+            this.ciudadBindingSource.DataSource = typeof(UD1_EjemploEnlaceDatos.Ciudad);
+            // 
             // nombreCiudadDataGridViewTextBoxColumn
             // 
             this.nombreCiudadDataGridViewTextBoxColumn.DataPropertyName = "NombreCiudad";
@@ -144,18 +144,6 @@
             this.paisCiudadDataGridViewTextBoxColumn.Name = "paisCiudadDataGridViewTextBoxColumn";
             this.paisCiudadDataGridViewTextBoxColumn.Width = 125;
             // 
-            // ciudadBindingSource
-            // 
-            this.ciudadBindingSource.DataSource = typeof(UD1_EjemploEnlaceDatos.Ciudad);
-            // 
-            // ciudadBindingSource2
-            // 
-            this.ciudadBindingSource2.DataSource = typeof(UD1_EjemploEnlaceDatos.Ciudad);
-            // 
-            // ciudadBindingSource1
-            // 
-            this.ciudadBindingSource1.DataSource = typeof(UD1_EjemploEnlaceDatos.Ciudad);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -173,8 +161,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCiudades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,14 +173,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvCiudades;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnErase;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCiudadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn poblacionCiudadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paisCiudadDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource ciudadBindingSource;
-        private System.Windows.Forms.BindingSource ciudadBindingSource1;
-        private System.Windows.Forms.BindingSource ciudadBindingSource2;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnErase;
     }
 }
 
