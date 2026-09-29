@@ -66,6 +66,9 @@ namespace UD1_EjemploEnlaceDatos
 
         private void btnErase_Click(object sender, EventArgs e)
         {
+            //no se puede modificar una colección mientras la recorres con foreach.
+            //Al llamar a ciudades.ToList() creas una copia de la lista.
+            //El foreach recorre la copia, mientras que el Remove actúa sobre la original
             foreach (Ciudad c in ciudades.ToList())
             {
                 if (c.NombreCiudad == "Sevilla")
